@@ -118,6 +118,46 @@ const FRUIT_FACTS = {
         "Lemon water for morning detox in wellness traditions"
       ]
     }
+  },
+  strawberry: {
+    nutrition: {
+      calories: "32 kcal",
+      fiber: "2.0g",
+      vitamin_c: "89% DV"
+    },
+    facts: [
+      "Strawberries are the only fruit with seeds on the outside",
+      "One strawberry has about 200 seeds on its surface",
+      "They belong to the rose family along with apples and cherries"
+    ],
+    benefits: [
+      "Excellent source of vitamin C and antioxidants",
+      "Supports heart health and immune system",
+      "May help regulate blood sugar levels"
+    ],
+    season: "Peak season from April to July",
+    cultural_info: {
+      origin: "Europe and North America",
+      regions: ["Europe", "North America", "Asia", "Australia", "South America"],
+      cultural_significance: [
+        "🍓 Symbol of love and passion in many cultures",
+        "👑 Associated with royalty - served at medieval feasts",
+        "🌸 Represents spring renewal and new beginnings",
+        "💕 Traditional romantic fruit in European folklore"
+      ],
+      popular_varieties_by_region: {
+        "North America": ["Albion", "Chandler", "Seascape", "Jewel"],
+        "Europe": ["Elsanta", "Sonata", "Clery", "Gariguette"],
+        "Asia": ["Amaou", "Tochiotome", "Akihime"],
+        "Australia": ["Festival", "Redlands Joy", "Albion"]
+      },
+      traditional_uses: [
+        "Strawberries and cream at Wimbledon tennis",
+        "French fraises des bois in gourmet cuisine",
+        "Japanese strawberry daifuku (mochi desserts)",
+        "American strawberry shortcake tradition"
+      ]
+    }
   }
 };
 
@@ -167,6 +207,33 @@ const REGIONAL_BUNDLES = {
     cultural_context: "Celebrating American orchard traditions and the popularity of apple pie and lemonade.",
     emoji: "🦅",
     traditional_recipe: "Perfect for apple pie with lemon zest or fresh lemonade!"
+  },
+  european_romance: {
+    name: "European Romance",
+    region: "Europe",
+    fruits: ["strawberry", "lemon"],
+    description: "A romantic combination celebrating European strawberry traditions and citrus elegance.",
+    cultural_context: "Inspired by French patisseries and British garden parties where strawberries and lemon are cherished.",
+    emoji: "💕",
+    traditional_recipe: "Try strawberry lemon tarts or British strawberries and cream!"
+  },
+  berry_harvest: {
+    name: "Berry Harvest Festival",
+    region: "Worldwide",
+    fruits: ["strawberry", "apple"],
+    description: "Celebrate the joy of berry picking season with this sweet and crisp combination.",
+    cultural_context: "Honoring harvest festivals worldwide where berries and orchard fruits are celebrated together.",
+    emoji: "🍓",
+    traditional_recipe: "Perfect for strawberry apple crisp or fresh fruit salads!"
+  },
+  spring_awakening: {
+    name: "Spring Awakening",
+    region: "Worldwide",
+    fruits: ["strawberry", "banana", "lemon"],
+    description: "A vibrant mix representing the renewal and freshness of spring across cultures.",
+    cultural_context: "Celebrating spring festivals worldwide where fresh fruits symbolize new beginnings and vitality.",
+    emoji: "🌸",
+    traditional_recipe: "Create a spring smoothie bowl or fresh fruit parfait!"
   }
 };
 
@@ -335,7 +402,7 @@ function createRegionalBundleCard(bundleKey, bundle) {
       </div>
       <div class="bundle-fruits">
         ${bundle.fruits.map(fruit => {
-          const fruitEmoji = fruit === 'apple' ? '🍏' : fruit === 'banana' ? '🍌' : '🍋';
+          const fruitEmoji = fruit === 'apple' ? '🍏' : fruit === 'banana' ? '🍌' : fruit === 'lemon' ? '🍋' : '🍓';
           return `<span class="fruit-emoji" title="${fruit}">${fruitEmoji}</span>`;
         }).join('')}
       </div>
